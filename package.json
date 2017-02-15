@@ -7,7 +7,7 @@
     "scss": "node-sass --output-style compressed -o public/css src/scss",
     "watch:scss": "onchange 'src/scss/*.scss' -- npm run scss",
     "compile:js": "onchange 'src/js/*.js' -- gulp",
-    "serve": "live-server --port=3000 --open=public --entry-file=index.html",
+    "serve": "live-server --port=3000 --entry-file=index.html",
     "watch": "parallelshell 'npm run compile:js' 'npm run watch:scss'",
     "dev": "parallelshell \"npm run watch\" \"npm run serve\""
   },
