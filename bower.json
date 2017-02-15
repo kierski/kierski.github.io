@@ -1,0 +1,22 @@
+{
+  "name": "personal_card",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Andrzej <kierski.andrzej@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "reset-css": "^2.2.0"
+  },
+  "directory": "src/components"
+}
