@@ -1,3 +1,4 @@
+
 .indicator {
   position: absolute;
   bottom: 40px;
@@ -7,7 +8,12 @@
   right: 50%;
   transform: translateX(50%);
   border-radius: 100%;
-  transition: all 1s;
+  transition: all .5s;
+  &:visited, &:hover, &:active {
+    outline : none;
+    text-decoration: none;
+    color: inherit;
+  }
   &::before, &::after {
     content: "";
     display: block;
@@ -17,13 +23,13 @@
     background-color: $primary-color-text;
   }
   &::before {
-    top: 55%;
-    right: 0px;
+    top: 51%;
+    right: 5px;
     transform: translateY(-50%) rotate(-50deg);
   }
   &::after  {
-    top: 56%;
-    left: -6px;
+    top: 51%;
+    right: 31px;
     transform: translateY(-50%) rotate(50deg);
   }
   &--animate   {
