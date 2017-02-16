@@ -1,0 +1,10 @@
+body {
+  background-color: $backgroundPrimaryColor;
+  font-family: 'Roboto Slab', serif;
+}
+
+main {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1.5s ease-in;
+}

@@ -1,0 +1,47 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: url('../img/hero.jpg');
+    background-size: cover;
+    background-position: center center;
+  }
+  &__particles {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: $primary-text-color;
+    opacity: .5;
+  }
+  &__intro {
+    background: $primary-color-text;
+    opacity: 0.9;
+    padding: 12% 10%;
+    outline: 4px double $primary-color-text;
+    outline-offset: 10px;
+    text-align: center;
+    transform: translateY(-50%);
+    top: 50%;
+    position: absolute;
+    h1 {
+      margin-bottom: 16%;
+      font-size: 4em;
+      letter-spacing: .1em;
+    }
+    span {
+      font-weight: 300;
+    }
+  }
+}

@@ -1,3 +1,4 @@
+
 const gulp = require('gulp');
 const concat = require('gulp-concat');
 const sourcemaps = require('gulp-sourcemaps');
@@ -6,7 +7,7 @@ const plumber = require('gulp-plumber');
 const babel = require('gulp-babel');
 
 gulp.task('default', () => {
-	return gulp.src(['src/components/jquery/dist/jquery.min.js', 'src/js/main.js'])
+	return gulp.src(['src/js/particles-config.js', 'src/js/load.js', 'src/js/header.js', 'src/js/main.js'])
 		.pipe(plumber())
 		.pipe(sourcemaps.init())
     .pipe(babel({
@@ -20,4 +21,12 @@ gulp.task('default', () => {
 
 gulp.task('watch', () => {
   gulp.watch('src/js/**/*.js', ['default']);
+});
+
+gulp.task('components', () => {
+	return gulp.src(['src/components/jQuery/dist/jquery.min.js', 'src/components/typed.js/js/typed.js', 'src/components/particles/particles.js'])
+    .pipe(plumber())
+    .pipe(concat('components.js'))
+    .pipe(uglify())
+		.pipe(gulp.dest('public/js'));
 });

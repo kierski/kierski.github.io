@@ -16,7 +16,10 @@
     "tests"
   ],
   "devDependencies": {
-    "reset-css": "^2.2.0"
+    "reset-css": "^2.2.0",
+    "particles": "git+https://github.com/VincentGarreau/particles.js.git",
+    "typed.js": "^1.1.4",
+    "jQuery": "^3.1.1"
   },
   "directory": "src/components"
 }
