@@ -12,6 +12,9 @@ Author URI:  kier.ski
 @import 'variables';
 
 /* variables */
+@import 'mixins';
+
+/* variables */
 @import 'general';
 
 /* loader */
@@ -20,58 +23,8 @@ Author URI:  kier.ski
 /* header */
 @import 'parts/header';
 
+/* indicator */
+@import 'parts/indicator';
 
-.indicator {
-  position: absolute;
-  bottom: 40px;
-  width: 40px;
-  height: 40px;
-  padding: 10px;
-  right: 50%;
-  transform: translateX(50%);
-  border-radius: 100%;
-  transition: all 1s;
-  &::before, &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 40px;
-    height: 1px;
-    background-color: $primary-color-text;
-  }
-  &::before {
-    top: 55%;
-    right: 0px;
-    transform: translateY(-50%) rotate(-50deg);
-  }
-  &::after  {
-    top: 56%;
-    left: -6px;
-    transform: translateY(-50%) rotate(50deg);
-  }
-  &--animate   {
-    position: fixed;
-    right: 40px;
-    border: 1px solid $primary-color-text;
-    border-radius: 100%;
-    transform: rotate(540deg);
-    &::before, &::after {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 30px;
-      height: 1px;
-      background-color: $primary-color-text;
-    }
-    &::before {
-      top: 51%;
-      right: 5px;
-      transform: translateY(-50%) rotate(-50deg);
-    }
-    &::after  {
-      top: 51%;
-      left: 5px;
-      transform: translateY(-50%) rotate(50deg);
-    }
-  }
-}
+/* about */
+@import 'parts/about';

@@ -10,8 +10,16 @@ const header = () => {
 
   		if (sectionBelow >= window.pageYOffset) {
   			const topOffset = document.querySelector('body').scrollTop;
-  			headerBg.setAttribute('style', 'top:' + -(topOffset/10) + '%;');
-  			headerIntro.setAttribute('style', 'top:' + (50 + topOffset / 40).toFixed(2) + '%');
+        // pure JS
+  			// headerBg.setAttribute('style', 'top:' + -(topOffset/10) + '%;');
+  			// headerIntro.setAttribute('style', 'top:' + (50 + topOffset / 40).toFixed(2) + '%');
+        // jQuery
+        $(headerBg).css({
+         'top' : -(topOffset/10) + '%',
+        });
+        $(headerIntro).css({
+         'top' : (50 + topOffset / 40).toFixed(2) + '%',
+        });
   		}
 
   	});
